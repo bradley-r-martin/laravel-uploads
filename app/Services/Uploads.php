@@ -33,7 +33,7 @@ class Uploads
               $directory = app(\Hyn\Tenancy\Website\Directory::class);
             }else{
               $file = $this->data['file']->store('');
-              $directory = new Storage();
+              $directory = new \Storage();
             }
             if (!$directory->exists($file)) {
               $this->response = ['status'=>'failed','data'=>['errors'=>['Unable to save file']]];
