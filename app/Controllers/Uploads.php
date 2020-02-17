@@ -3,7 +3,7 @@ namespace BRM\Uploads\app\Controllers;
 
 use Illuminate\Routing\Controller;
 
-class Files extends Controller
+class Uploads extends Controller
 {
     use \BRM\Vivid\app\Traits\Control;
 

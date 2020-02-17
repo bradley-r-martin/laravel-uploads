@@ -16,7 +16,12 @@ class CreateUploadsTable extends Migration
         Schema::create('uploads', function (Blueprint $table) {
             $table->increments('id');
             $table->text('file');
-            $table->enum('status', ['staging','live'])->default('staging');
+            $table->text('name');
+            $table->string('mime');
+            $table->integer('size');
+            $table->text('hash');
+            $table->string('subject');
+            $table->integer('subjectId')->unsigned();
             $table->timestamp('createdAt')->useCurrent();
             $table->timestamp('updatedAt')->nullable();
             $table->timestamp('deletedAt')->nullable();
