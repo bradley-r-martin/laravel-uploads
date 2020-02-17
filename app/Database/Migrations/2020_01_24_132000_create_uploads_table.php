@@ -20,7 +20,7 @@ class CreateUploadsTable extends Migration
             $table->string('mime');
             $table->integer('size');
             $table->text('hash');
-            $table->string('subject');
+            $table->string('subject')->nullable();
             $table->integer('subjectId')->unsigned();
             $table->timestamp('createdAt')->useCurrent();
             $table->timestamp('updatedAt')->nullable();
