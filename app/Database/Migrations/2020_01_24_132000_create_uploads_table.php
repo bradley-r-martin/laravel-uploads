@@ -21,7 +21,7 @@ class CreateUploadsTable extends Migration
             $table->integer('size');
             $table->text('hash');
             $table->string('subject')->nullable();
-            $table->integer('subjectId')->unsigned();
+            $table->integer('subjectId')->unsigned()->nullable();
             $table->timestamp('createdAt')->useCurrent();
             $table->timestamp('updatedAt')->nullable();
             $table->timestamp('deletedAt')->nullable();

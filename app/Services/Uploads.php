@@ -41,7 +41,7 @@ class Uploads
             }
             $contents = $directory->get($file);
             $this->record->file = '/uploads/'.$file;
-            $this->record->mime = $this->data['file']->mimeType($file);
+            $this->record->mime = $this->data['file']->getMimeType($file);
             $this->record->size =  $this->data['file']->getSize();
             $this->record->hash = md5($contents);
             $this->record->name = $this->data['file']->getClientOriginalName();
