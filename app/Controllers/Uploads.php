@@ -25,8 +25,11 @@ class Uploads extends Controller
       $type = $directory->mimeType($filename);
       $response = \Response::make($file, 200);
       $response->header("Content-Type", $type);
-      echo $response;
-      exit();
+
+      return $response->withHeaders([
+        'X-Vapor-Base64-Encode' => 'True',
+      ]);
+
     }
 
 
